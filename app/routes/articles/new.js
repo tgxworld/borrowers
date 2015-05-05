@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   model: function() {
     return this.store.createRecord('article', {
       friend: this.modelFor('friends/show')
-    })
+    });
   },
   actions: {
     save: function() {
@@ -13,7 +13,7 @@ export default Ember.Route.extend({
 
       model.save().then(function() {
         _this.transitionTo('articles');
-      })
+      });
     },
     cancel: function() {
       this.transitionTo('articles');
@@ -24,4 +24,4 @@ export default Ember.Route.extend({
 
     if(model.get('isNew')) { model.destroyRecord(); }
   }
-})
+});
