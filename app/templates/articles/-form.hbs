@@ -1,0 +1,10 @@
+<form {{action 'save' on='submit'}}>
+  <h2>{{errorMessage}}</h2>
+
+  <fieldset>
+    {{input value=model.description placeholder="Description"}}<br>
+    {{input value=model.notes placeholder="Notes"}}<br>
+    <input type="submit" value="Save" class="primary">
+    <button {{action "cancel"}}>Cancel</button>
+  </fieldset>
+</form>
